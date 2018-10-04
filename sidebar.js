@@ -12,7 +12,7 @@ async function updateSidebar() {
 	}
 
 	try {
-		var info = await eval(`(${getInfo})($0)`);
+		var info = await eval(`(${getInfo})($0 || document)`);
 
 		render(info);
 	}
